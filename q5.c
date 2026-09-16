@@ -2,16 +2,19 @@
 
 int main()
 {
-    float a, b, sum;
-    int result;
+    int n, digit, reverse = 0;
 
-    printf("Enter two floating numbers: ");
-    scanf("%f %f", &a, &b);
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-    sum = a + b;
-    result = sum;
+    while (n != 0)
+    {
+        digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = n / 10;
+    }
 
-    printf("The floor of the sum = %d", result);
+    printf("Reversed = %d", reverse);
 
     return 0;
 }

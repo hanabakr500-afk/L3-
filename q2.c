@@ -2,19 +2,22 @@
 
 int main()
 {
-    char ch;
+    int n, i;
 
-    printf(" lowercase letter: ");
-    scanf(" %c", &ch);
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
 
-    while (ch >= 'a' && ch <= 'z')
+    for (i = 1; i <= n; i++)
     {
-        ch = ch - 32;
-
-        printf("Uppercase = %c\n", ch);
-
-        break;
+        if (i * i == n)
+        {
+            printf("Perfect square");
+            return 0;
+        }
     }
 
+    printf("Not a perfect square");
+
     return 0;
+    
 }

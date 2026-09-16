@@ -2,24 +2,21 @@
 
 int main()
 {
-    char ch;
+    int n, i, count = 0;
 
-    printf("Enter an alphabet : ");
-    scanf(" %c", &ch);
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
 
-    while (1)
+    for (i = 1; i <= n; i++)
     {
-        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
-        {
-            printf("It is an alphabet\n");
-        }
-        else
-        {
-            printf("It is not an alphabet\n");
-        }
-
-        break;
+        if (n % i == 0)
+            count++;
     }
+
+    if (count == 2)
+        printf("Prime number");
+    else
+        printf("Not a prime number");
 
     return 0;
 }

@@ -2,40 +2,19 @@
 
 int main()
 {
-    int temp;
-    int time;
-
-    printf("Enter temperature: ");
-    scanf("%d", &temp);
-
-    while (temp >= 0 && temp <= 100)
+    int i,number,power,result=1;
+    printf("enter a number :");
+    scanf("%d",&number);
+    printf("enter the power :");
+    scanf("%d",&power);
+    for(i=1;i<=power;i++)
     {
-        if (temp < 30)
-        {
-            time = 7;
-        }
-        else if (temp < 60)
-        {
-            time = 5;
-        }
-        else if (temp < 90)
-        {
-            time = 3;
-        }
-        else
-        {
-            time = 1;
-        }
-
-        printf("Heating time = %d minutes\n", time);
-
-        break;
+          result*=number;
+        
     }
+      printf("result = %d",result);
 
-    if (temp < 0 || temp > 100)
-    {
-        printf("Invalid input\n");
-    }
+
 
     return 0;
 }
